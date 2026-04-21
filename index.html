@@ -8,12 +8,17 @@
     <script src="https://cdn.tailwindcss.com"></script>
     
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
-      body {
-        background-color: #f5f2ed; /* 统一底色 */
-      }
-    </style>
-  </head>
+    /* 2. 强制所有的标题使用这个字体 */
+    h1, h2, .font-cute {
+      font-family: 'ZCOOL KuaiLe', cursive !important;
+    }
+    
+    body {
+      background-color: #f5f2ed;
+      /* 如果你想全站都用快乐体，也可以加在这里 */
+    }
+  </style>
+</head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
