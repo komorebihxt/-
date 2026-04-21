@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Space+Mono&family=Inter:wght@300;400;600;900&family=ZCOOL+KuaiLe&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Arial", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-mono: "Space Mono", monospace;
+  --font-cute: "ZCOOL KuaiLe", cursive;
+  
+  --color-brand: #d4a373;
+  --color-dark: #2d1b14;
+  --color-paper: #f5f2ed;
+}
+
+@layer utilities {
+  .toy-shadow {
+    box-shadow: 0 40px 100px -20px rgba(45, 27, 20, 0.3);
+  }
+  
+  .gloss-shine {
+    background: linear-gradient(135deg, rgba(255,255,255,0.6) 0%, transparent 50%, rgba(0,0,0,0.1) 100%);
+  }
+  
+  .lava-texture {
+    background: radial-gradient(circle at 30% 30%, #4a2c2a 0%, #2d1b14 70%, #1a0f0a 100%);
+  }
+
+  .rounded-inherit {
+    border-radius: inherit;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  @keyframes stage-flicker {
+    0%, 100% { opacity: 0.1; filter: blur(40px); }
+    50% { opacity: 0.3; filter: blur(60px); scale: 1.1; }
+  }
+  .animate-stage-light {
+    animation: stage-flicker 2s infinite ease-in-out;
+  }
+}
+
