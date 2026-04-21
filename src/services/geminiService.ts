@@ -24,7 +24,7 @@ Output must be in JSON format.
 
 export async function analyzeInput(text: string): Promise<AnalysisResult> {
   const response = await ai.models.generateContent({
-    model: "gemini-3-flash-preview",
+    model: "gemini-1.5-flash-preview",
     contents: [{ parts: [{ text }] }],
     config: {
       systemInstruction: ANALYSIS_SYSTEM_INSTRUCTION,
@@ -66,7 +66,7 @@ export async function generateArtToyImage(result: AnalysisResult): Promise<strin
   const finalPrompt = `Professional high-end Art Toy studio photography, 3D render, Octane render, 8k resolution. The subject is: ${result.imagePrompt}. ${shapePrompt} ${colorPrompt} BRIGHT AND CLEAN PASTEL BACKGROUND, SOFT LUXURY STUDIO LIGHTING, high-gloss finish.`;
 
   const response = await ai.models.generateContent({
-    model: "gemini-2.5-flash-image",
+    model: "gemini-1.5-flash-image",
     contents: [{ parts: [{ text: finalPrompt }] }],
     config: {
       imageConfig: {
