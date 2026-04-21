@@ -1,22 +1,28 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>便便主理人 | PooMaster</title>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <style>
-    /* 2. 强制所有的标题使用这个字体 */
-    h1, h2, .font-cute {
-      font-family: 'ZCOOL KuaiLe', cursive !important;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>便便主理人 | PooMaster</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+  
+  <style>
+    /* 3. 暴力强制生效逻辑 */
+    /* 我们给所有标题和带有特定类名的元素强制指定快乐体 */
+    h1, h2, h3, .font-cute, [class*="text-"] {
+      font-family: 'ZCOOL KuaiLe', 'ZCOOL_KuaiLe', cursive !important;
     }
-    
+
     body {
-  background: radial-gradient(circle at center, #fdfaf5 0%, #f5f2ed 100%);
-  min-height: 100vh;
-}
+      background-color: #f5f2ed;
+      /* 这里的字体作为保底，防止出现诡异楷体 */
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    }
   </style>
 </head>
   <body>
