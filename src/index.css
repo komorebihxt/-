@@ -40,7 +40,7 @@
   @keyframes stage-flicker {
     0%, 100% { opacity: 0.1; filter: blur(40px); }
     50% { opacity: 0.3; filter: blur(60px); scale: 1.1; }
-  } 
+  }
   .animate-stage-light {
     animation: stage-flicker 2s infinite ease-in-out;
   }
