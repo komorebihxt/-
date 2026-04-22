@@ -1,7 +1,7 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { AnalysisResult } from "../types";
 
-const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
+const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
 const ANALYSIS_SYSTEM_INSTRUCTION = `
 You are the "便便主理人" (Poo Manager) Analyst. Your job is to transform a user's dietary and lifestyle diary into 3D Art Toy parameters.
